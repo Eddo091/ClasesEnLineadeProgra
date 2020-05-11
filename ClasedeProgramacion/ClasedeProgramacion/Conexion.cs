@@ -37,11 +37,7 @@ namespace ClasedeProgramacion
             comandosSQL.CommandText = "select * from peliculas";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "productos");
-
-            comandosSQL.CommandText = "select alquiler.IdAlquiler, peliculas.idPelicula, pelicula.descripcion, peliculas.sinopsis, peliculas.generp from peliculas inner join alquiler on(alquiler.idAlquiler=peliculas.IdAlquiler)";
-            miAdaptadorDatos.SelectCommand = comandosSQL;
-            miAdaptadorDatos.Fill(ds, "peliculas_alquiler");
-
+            
             comandosSQL.CommandText = "select * from alquiler";
             miAdaptadorDatos.SelectCommand = comandosSQL;
             miAdaptadorDatos.Fill(ds, "alquiler");
